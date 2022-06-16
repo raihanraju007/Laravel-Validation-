@@ -25,4 +25,5 @@ Route::post('form/client/store', [FormController::class, 'ClientStore'])->name('
 
 
 Route::get('form/server', [FormController::class, 'ServerSideLaravelValidation'])->name('server.laravel.validation');
+Route::post('form/server/store', [FormController::class, 'ServerStore'])->name('server.store');
 

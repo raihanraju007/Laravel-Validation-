@@ -21,48 +21,78 @@
 <div class="container">
     <h1>Hello Clent Side Form !</h1>
     <div class="row">
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="{{route('server.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="">Name:</label>
                   <input type="text"  class="form-control" name="name" />
+                  @error('name')
+                      <span class="text-danger">{{$message}}</span>
+                  @enderror
                 </div>
                 <div class="form-group">
                 <label for="">Email:</label>
                   <input type="email"  class="form-control" name="email" />
+                  @error('email')
+                      <span class="text-danger">{{$message}}</span>
+                  @enderror
                 </div>
                 <div class="form-group">
                 <label for="">Phone:</label>
                   <input type="number"  class="form-control " name="phone" />
+                  @error('phone')
+                      <span class="text-danger">{{$message}}</span>
+                  @enderror
                 </div>
                 <div class="form-group">
                 <label for="">Designation:</label>
                   <input type="text"  class="form-control" name="designation" />
+                  @error('designation')
+                      <span class="text-danger">{{$message}}</span>
+                  @enderror
                 </div>
                 <div class="form-group">
                 <label for="">Password:</label>
                   <input type="password"  class="form-control" name="password" />
+                  @error('password')
+                      <span class="text-danger">{{$message}}</span>
+                  @enderror
                 </div>
                 <div class="form-group">
                 <label for="">Company Name:</label>
                   <input type="text"  class="form-control" name="company_name" />
+                  @error('company_name')
+                      <span class="text-danger">{{$message}}</span>
+                  @enderror
                 </div>
                 <div class="form-group">
                 <label for="">Company Website:</label>
                   <input type="text"  class="form-control" name="company_website" />
+                  @error('company_website')
+                      <span class="text-danger">{{$message}}</span>
+                  @enderror
                 </div>
                 <div class="form-group">
                 <label for="">Company Portfolio:</label>
                 <p>N.B: ( Before upload, please rename your documents with your company name)</p>
                   <input type="file"  class="form-control" name="company_portfolio" />
+                  @error('company_portfolio')
+                      <span class="text-danger">{{$message}}</span>
+                  @enderror
                 </div>
                 <div class="form-group">
                 <label for="">Address:</label>
                   <input type="text"  class="form-control" name="company_address" />
+                  @error('company_address')
+                      <span class="text-danger">{{$message}}</span>
+                  @enderror
                 </div>
                 <div class="form-group">
                 <label for="">Photo:</label>
                   <input type="file"  class="form-control" name="photo" />
+                  @error('photo')
+                      <span class="text-danger">{{$message}}</span>
+                  @enderror
                 </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-primary btn-block">Register</button>
